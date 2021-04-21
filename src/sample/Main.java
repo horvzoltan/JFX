@@ -19,7 +19,7 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 			primaryStage.setTitle("Restaurant POS");
-			primaryStage.setScene(new Scene(root, 600, 400));
+			primaryStage.setScene(new Scene(root, 1200, 800));
 			primaryStage.show();
 
 		} catch (Exception e) {
