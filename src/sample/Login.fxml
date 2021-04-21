@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogIn">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogIn">
    <center>
       <Pane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,8 +21,8 @@
                </image>
             </ImageView>
             <Button fx:id="button" layoutX="274.0" layoutY="320.0" mnemonicParsing="false" onAction="#userLogin" text="Sign in" />
-            <TextField layoutX="226.0" layoutY="240.0" />
-            <PasswordField layoutX="226.0" layoutY="282.0" />
+            <TextField fx:id="username" layoutX="226.0" layoutY="240.0" promptText="username" />
+            <PasswordField fx:id="password" layoutX="226.0" layoutY="282.0" promptText="password" />
             <Label layoutX="228.0" layoutY="223.0" text="Username" />
             <Label layoutX="228.0" layoutY="265.0" text="Password" />
             <Text fill="WHITE" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RestaurantPOS" wrappingWidth="157.5703125">
@@ -30,6 +30,11 @@
                   <Font size="24.0" />
                </font>
             </Text>
+            <Label fx:id="wrongLogIn" alignment="CENTER" layoutX="137.0" layoutY="354.0" prefHeight="20.0" prefWidth="328.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </center>

@@ -33,22 +33,20 @@ public class LogIn {
 	}
 
 	private void checkLogin() throws IOException {
-//        Main m = new Main();
-//        if(username.getText().toString().equals("javacoding") && password.getText().toString().equals("123")) {
-//            wrongLogIn.setText("Success!");
-//
-//            m.changeScene("afterLogin.fxml");
-//        }
-//
-//        else if(username.getText().isEmpty() && password.getText().isEmpty()) {
-//            wrongLogIn.setText("Please enter your data.");
-//        }
-//
-//
-//        else {
-//            wrongLogIn.setText("Wrong username or password!");
-//        }
-//    }
+		Main m = new Main();
+		if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+			wrongLogIn.setText("Success!");
 
+			m.changeScene("afterLogin.fxml");
+		}
+
+		else if (username.getText().isEmpty() && password.getText().isEmpty()) {
+			wrongLogIn.setText("Please enter your data.");
+		}
+
+		else {
+			wrongLogIn.setText("Wrong username or password!");
+		}
 	}
+
 }
