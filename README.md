@@ -1,1 +1,1 @@
-# Simple Restaurant POS
+# Simple Restaurant POS System
