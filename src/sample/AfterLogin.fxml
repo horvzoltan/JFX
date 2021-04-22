@@ -28,7 +28,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="430.0" />
                </content>
             </ScrollPane>
-            <Button fx:id="logout" layoutX="1134.0" layoutY="761.0" mnemonicParsing="false" onAction="#logout" text="Button" />
+            <Button fx:id="logout" layoutX="1134.0" layoutY="761.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
          </children>
       </AnchorPane>
    </right>
