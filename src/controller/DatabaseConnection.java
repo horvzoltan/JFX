@@ -16,6 +16,7 @@ public class DatabaseConnection {
 			databaseLink = DriverManager.getConnection(url, dbUser, dbPassword);
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}
 		return databaseLink;
 	}
