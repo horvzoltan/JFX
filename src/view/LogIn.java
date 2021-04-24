@@ -8,6 +8,11 @@ import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LogIn {
 
@@ -25,13 +30,31 @@ public class LogIn {
 	private PasswordField password;
 
 	public void userLogin(ActionEvent event) throws IOException {
-		checkLogin();
+		String sqlSelectAllUsers = "SELECT * FROM USERS";
+		String connectionUrl = "jdbc:mysql://localhost:3306/inventory?serverTimezone=UTC";
+		try (Connection conn = DriverManager.getConnection(connectionUrl, "root", "almarepa2");
+				PreparedStatement ps = conn.prepareStatement(sqlSelectAllUsers);
+				ResultSet rs = ps.executeQuery()) {
 
+			while (rs.next()) {
+				String usernameFromDb = rs.getString("USERNAME");
+				String passwordFromDb = rs.getString("PASSWORD");
+				if (username.getText().toString().equals(usernameFromDb)) {
+					checkLogin(usernameFromDb, passwordFromDb);
+				}
+
+			}
+			wrongLogIn.setText("Wrong username or password!");
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
-	private void checkLogin() throws IOException {
+	private void checkLogin(String usernameFromDb, String passwordFromDb) throws IOException {
 		Main m = new Main();
-		if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+		if (username.getText().toString().equals(usernameFromDb)
+				&& password.getText().toString().equals(passwordFromDb)) {
 			wrongLogIn.setText("Success!");
 
 			m.changeScene("AfterLogin.fxml");
@@ -45,5 +68,4 @@ public class LogIn {
 			wrongLogIn.setText("Wrong username or password!");
 		}
 	}
-
 }
