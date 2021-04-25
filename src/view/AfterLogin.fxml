@@ -25,7 +25,7 @@
                <font>
                   <Font size="30.0" />
                </font></TextField>
-            <Button fx:id="logoutButton" layoutX="1086.0" layoutY="686.0" mnemonicParsing="false" onAction="#logout" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: pink;" text="Logout" textFill="RED">
+            <Button fx:id="logoutButton" layoutX="1086.0" layoutY="686.0" mnemonicParsing="false" onAction="#logout" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="Logout" textFill="RED">
                <font>
                   <Font size="18.0" />
                </font>
@@ -39,7 +39,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="408.0" style="-fx-background-color: yellow;" text="Manage Inventory" textAlignment="CENTER" textFill="RED" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+            <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="408.0" style="-fx-background-color: yellow;" text="Manage Inventory" textAlignment="CENTER" textFill="RED" textOverrun="LEADING_WORD_ELLIPSIS">
                <font>
                   <Font size="18.0" />
                </font>
@@ -197,6 +197,11 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+            </Button>
+            <Button fx:id="openRegisterPageButton" layoutX="981.0" layoutY="686.0" mnemonicParsing="false" onAction="#openRegisterPage" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="Register" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
             </Button>
          </children>
       </AnchorPane>

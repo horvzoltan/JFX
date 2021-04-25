@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Register">
+   <center>
+      <AnchorPane prefHeight="300.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameToRegister" layoutX="138.0" layoutY="100.0" prefHeight="30.0" prefWidth="175.0" promptText="username" />
+            <PasswordField fx:id="passwordToRegister" layoutX="138.0" layoutY="142.0" prefHeight="30.0" prefWidth="175.0" promptText="password" />
+            <Button fx:id="registerButton" layoutX="185.0" layoutY="192.0" mnemonicParsing="false" onAction="#registerNewUser" prefHeight="31.0" prefWidth="82.0" text="Register" />
+            <Label layoutX="152.0" layoutY="60.0" text="Register New User">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongLogin" layoutX="138.0" layoutY="172.0" prefHeight="17.0" prefWidth="175.0" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
