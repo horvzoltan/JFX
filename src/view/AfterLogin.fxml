@@ -21,6 +21,9 @@
                   <TableColumn fx:id="col_currentStock" editable="false" prefWidth="120.0" text="Current stock" />
                 <TableColumn fx:id="col_price" editable="false" prefWidth="282.0" text="Price" />
               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
             </TableView>
             <TextField fx:id="searchTextField" layoutY="550.0" prefWidth="300.0" promptText="search">
                <font>
@@ -40,7 +43,7 @@
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button layoutY="681.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" text="Manage Inventory" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+            <Button fx:id="openInventoryButton" layoutY="681.0" mnemonicParsing="false" onAction="#openManageInventory" prefHeight="39.0" prefWidth="175.0" text="Manage Inventory" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

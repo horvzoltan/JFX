@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -44,6 +46,7 @@ public class Register {
 				ps.setString(1, usernameToRegister.getText());
 				ps.setString(2, passwordToRegister.getText());
 				ps.execute();
+				JOptionPane.showMessageDialog(null, "Registration successfull");
 				conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();

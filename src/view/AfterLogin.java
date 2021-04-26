@@ -64,7 +64,10 @@ public class AfterLogin {
 		Register reg = new Register();
 		reg.open();
 	}
-
+	public void openManageInventory(ActionEvent e) throws IOException {
+		ManageInventory manage = new ManageInventory();
+		manage.open();
+	}
 	public void addItemToCart(ActionEvent event) throws IOException {
 
 	}
