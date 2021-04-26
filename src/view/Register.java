@@ -6,10 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class Register {
 
@@ -29,7 +33,7 @@ public class Register {
 	@FXML
 	private Label wrongLogin;
 
-	public void registerNewUser() {
+	public void registerNewUser() throws InterruptedException{
 		if (usernameToRegister.getText().matches(Validator.regularExpression)
 				&& passwordToRegister.getText().matches(Validator.regularExpression)) {
 
@@ -40,7 +44,6 @@ public class Register {
 				ps.setString(1, usernameToRegister.getText());
 				ps.setString(2, passwordToRegister.getText());
 				ps.execute();
-				wrongLogin.setText("Successfully registered");
 				conn.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -48,6 +51,22 @@ public class Register {
 
 		} else {
 			wrongLogin.setText("Invalid Username or password");
+		}
+		Thread.sleep(1000);
+		Stage stage = (Stage) wrongLogin.getScene().getWindow();
+		stage.close();
+	}
+
+	public void open() {
+		try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Register.fxml"));
+			Parent root1 = (Parent) fxmlLoader.load();
+			Stage stage = new Stage();
+			stage.setTitle("Register");
+			stage.setScene(new Scene(root1));
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

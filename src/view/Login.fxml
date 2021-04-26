@@ -5,8 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -16,19 +14,14 @@
    <center>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../../Pictures/Restaurant-billing-software-1210x642.jpeg" />
-               </image>
-            </ImageView>
-            <Button fx:id="button" layoutX="525.0" layoutY="466.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sign in">
+            <Button fx:id="button" layoutX="525.0" layoutY="466.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="50.0" prefWidth="200.0" text="Sign in">
                <font>
                   <Font size="20.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <TextField fx:id="username" layoutX="525.0" layoutY="339.0" prefHeight="50.0" prefWidth="200.0" promptText="username">
+            <TextField fx:id="username" layoutX="525.0" layoutY="343.0" prefHeight="50.0" prefWidth="200.0" promptText="username">
                <font>
                   <Font size="16.0" />
                </font></TextField>
@@ -36,7 +29,7 @@
                <font>
                   <Font size="16.0" />
                </font></PasswordField>
-            <Text fill="WHITE" layoutX="385.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RestaurantPOS" textAlignment="CENTER" wrappingWidth="479.5703125">
+            <Text layoutX="385.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RestaurantPOS" textAlignment="CENTER" wrappingWidth="479.5703125">
                <font>
                   <Font size="38.0" />
                </font>

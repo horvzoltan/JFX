@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -14,7 +15,10 @@
          <children>
             <TextField fx:id="usernameToRegister" layoutX="138.0" layoutY="100.0" prefHeight="30.0" prefWidth="175.0" promptText="username" />
             <PasswordField fx:id="passwordToRegister" layoutX="138.0" layoutY="142.0" prefHeight="30.0" prefWidth="175.0" promptText="password" />
-            <Button fx:id="registerButton" layoutX="185.0" layoutY="192.0" mnemonicParsing="false" onAction="#registerNewUser" prefHeight="31.0" prefWidth="82.0" text="Register" />
+            <Button fx:id="registerButton" layoutX="185.0" layoutY="192.0" mnemonicParsing="false" onAction="#registerNewUser" prefHeight="31.0" prefWidth="82.0" text="Register">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label layoutX="152.0" layoutY="60.0" text="Register New User">
                <font>
                   <Font size="18.0" />
